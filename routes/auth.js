@@ -1,3 +1,13 @@
+const express = require('express');
+//const User = require('../models/user');
+//need to import Messages ???
+
+const router = new express.Router();
+
+router.get('/', (req,res)=>{
+    return res.send('hello from auth routes!');
+})
+
 /** POST /login - login: {username, password} => {token}
  *
  * Make sure to update their last-login!
@@ -11,3 +21,5 @@
  *
  *  Make sure to update their last-login!
  */
+
+module.exports = router;

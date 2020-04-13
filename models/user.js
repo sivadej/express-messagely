@@ -1,10 +1,15 @@
 /** User class for message.ly */
 
-
+const db = require('../db');
 
 /** User of the site. */
 
 class User {
+
+  static async testAll() {
+    const results = await db.query(`SELECT username, first_name, last_name FROM users`);
+    return results.rows;
+  }
 
   /** register new user -- returns
    *    {username, password, first_name, last_name, phone}
