@@ -10,11 +10,6 @@ const { BCRYPT_WORK_FACTOR } = require('../config');
 
 class User {
 
-  static async testAll() {
-    const results = await db.query(`SELECT username, first_name, last_name FROM users`);
-    return results.rows;
-  }
-
   /** register new user -- returns
    *    {username, password, first_name, last_name, phone}
    */
